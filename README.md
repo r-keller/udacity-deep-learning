@@ -1,1 +1,1 @@
-# udacity-deepLearning
+# Udacity's Google Deep Learning Course
