@@ -1,20 +1,16 @@
 """Softmax."""
-
 import numpy as np
 
-scores = [1.0, 2.0, 3.0]
+# scores = [1.0, 2.0, 3.0]
 scores = np.array([[1, 2, 3, 6],
                    [2, 4, 5, 6],
                    [3, 8, 7, 6]])
 
-
 def softmax(x):
-    x=np.array(x)
-    """Compute softmax values for each sets of scores in x."""
-
+    x = np.array(x)
+    # Compute softmax values for each sets of scores in x.
     s = np.divide(np.exp(x),np.sum(np.exp(x)));
-    s=np.divide(s,np.sum(np.abs(s),axis=0))
-    
+    s = np.divide(s,np.sum(np.abs(s),axis=0)); # Ensure column-wise unit l1-norm.    
     return s;
 
 print(softmax(scores))
